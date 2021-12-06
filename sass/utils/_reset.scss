@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  li {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+}
+
+img {
+  width: 100%;
+  display: block;
+  /* display: unset; */
+  height: auto;
+}
+
+button {
+  border: none;
+}
+
+input {
+  outline: none;
+}

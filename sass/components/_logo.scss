@@ -1,0 +1,29 @@
+.logo {
+  display: block;
+
+  color: $accent-color;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  text-decoration: none;
+
+  @media screen and (min-width: 768px) {
+    padding: 26px 0 26px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 24px 0 24px 0;
+
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
+
+  &__black {
+    color: $color-logo-part-header;
+  }
+
+  &__white {
+    color: $hero-text-color;
+  }
+}
