@@ -16,15 +16,62 @@
   }
 }
 
-.modal {
+// .modal {
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   padding: 40px;
+//   max-width: 528px;
+//   width: calc(100% - 30px);
+
+//   max-height: 581px;
+//   height: calc(100% - 30px);
+
+//   transform: translate(-50%, -50%);
+
+//   background-color: $hero-text-color;
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+//   border-radius: 4px;
+
+//   &__button {
+//     position: absolute;
+//     right: 8px;
+//     top: 8px;
+
+//     width: 30px;
+//     height: 30px;
+
+//     background-color: $hero-text-color;
+//     border-radius: 50%;
+//     border: 1px solid rgba(0, 0, 0, 0.1);
+
+//     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//   }
+
+//   &__button:hover,
+//   &__button:focus {
+//     fill: $accent-color;
+//   }
+
+//   &__icon {
+//     display: cover;
+//     width: 11px;
+//     height: 11px;
+//   }
+// }
+
+// ----------форма------------
+.form {
+  // display: block;
   position: absolute;
   left: 50%;
   top: 50%;
   padding: 40px;
-  max-width: 528px;
+  max-width: 450px;
   width: calc(100% - 30px);
 
-  max-height: 581px;
+  max-height: 609px;
   height: calc(100% - 30px);
 
   transform: translate(-50%, -50%);
@@ -34,7 +81,12 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  &__button {
+  @media screen and (min-width: 769px) {
+    max-width: 528px;
+    max-height: 581px;
+  }
+
+  &__btn {
     position: absolute;
     right: 8px;
     top: 8px;
@@ -49,21 +101,16 @@
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &__button:hover,
-  &__button:focus {
+  &__btn:hover,
+  &__btn:focus {
     fill: $accent-color;
   }
 
-  &__icon {
+  &__icon-cross {
     display: cover;
     width: 11px;
     height: 11px;
   }
-}
-
-// ----------форма------------
-.form {
-  display: block;
 
   &__title {
     margin: 0;
@@ -159,6 +206,7 @@
   }
 
   &__button {
+    // display: block;
     width: 200px;
     height: 50px;
     padding: 10px 55px;
@@ -187,7 +235,7 @@
   line-height: calc(14 / 12);
   letter-spacing: 0.03em;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     font-weight: 400;
     font-size: 14px;
     line-height: calc(24 / 14);
