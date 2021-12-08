@@ -6,7 +6,6 @@
 
   @media screen and (min-width: 1200px) {
     margin-top: 34px;
-    // padding-bottom: 94px;
   }
 
   &__item {
@@ -25,6 +24,7 @@
     &:last-child {
       margin-bottom: 0;
     }
+
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       width: 354px;
       height: 440px;
@@ -123,9 +123,9 @@
     letter-spacing: 0.03em;
 
     color: $hero-text-color;
-  }
 
-  .projects__item:hover &__text {
-    transform: translateY(0);
+    .projects__item:hover & {
+      transform: translateY(0);
+    }
   }
 }

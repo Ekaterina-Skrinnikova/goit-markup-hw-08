@@ -18,7 +18,8 @@
 }
 
 .logo__footer {
-  display: inline-block;
+  display: block;
+  padding-top: 0;
 }
 
 .address {
@@ -47,7 +48,7 @@
 
 .join {
   @media screen and (min-width: 768px) {
-    margin-top: 5px;
+    margin-top: 12px;
     margin-left: 165px;
   }
   @media screen and (min-width: 1200px) {

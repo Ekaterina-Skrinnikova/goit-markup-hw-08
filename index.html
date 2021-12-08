@@ -18,69 +18,63 @@
   <body>
     <header>
       <div class="conteiner header-conteiner">
-        <!-- <div class="mobile"> -->
-        <a class="logo" href="">Web<span class="logo__black">Studio</span></a>
-        <!-- <button type="button" class="mobile__button">
-          <svg
-            width="40"
-            height="40"
-            aria-label="Переключатель мобильного меню"
+        <div class="menu-mobile">
+          <a class="logo" href="">Web<span class="logo__black">Studio</span></a>
+          <button
+            type="button"
+            class="menu-mobile__button js-open-menu"
+            aria-expanded="false"
+            aria-controls="menu"
           >
-            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
-          </svg>
-        </button> -->
-        <!-- </div> -->
-
-        <!-- <div class="menu"> -->
-        <nav class="nav-conteiner">
-          <ul class="site-nav list">
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link site-nav__link--active"
-                >Студия</a
-              >
-            </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-
-        <ul class="auth-nav list">
-          <li class="auth-nav__item">
-            <svg class="auth-nav__icon-mail">
-              <use href="./images/icons.svg#icon-envelope"></use>
-            </svg>
-            <a class="auth-nav__link" href="maito:info@devstudio.com"
-              >info@devstudio.com</a
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
             >
-          </li>
-          <li class="auth-nav__item">
-            <svg class="auth-nav__icon-tel">
-              <use href="./images/icons.svg#icon-smartphone"></use>
+              <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
             </svg>
-            <a class="auth-nav__link" href="tel:+380961111111"
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          </button>
+        </div>
 
-        <!-- <ul class="auth-nav-mobile list">
-            <li class="auth-nav-mobile__item">
-              <a class="auth-nav-mobile__link" href="tel:+380961111111"
-                >+38 096 111 11 11</a
-              >
-            </li>
-            <li class="auth-nav-mobile__item">
-              <a class="auth-nav-mobile__link" href="maito:info@devstudio.com"
+        <div class="menu js-menu-container" id="menu">
+          <nav class="nav-conteiner">
+            <ul class="site-nav list">
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link site-nav__link--active"
+                  >Студия</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="auth-nav list">
+            <li class="auth-nav__item">
+              <svg class="auth-nav__icon-mail">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              <a class="auth-nav__link" href="maito:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-          </ul> -->
+            <li class="auth-nav__item">
+              <svg class="auth-nav__icon-tel">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              <a
+                class="auth-nav__link auth-nav__link--color"
+                href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
 
-        <!-- <ul class="network">
+          <ul class="network">
             <li class="network__item">
               <a href="" class="network__link">Instagram</a>
             </li>
@@ -94,16 +88,19 @@
               <a href="" class="network__link">LinkedIn</a>
             </li>
           </ul>
+          <button type="button" class="menu__button js-close-menu">
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="icon-cross"
+                href="./images/icons.svg#icon-cross"
+              ></use>
+            </svg>
+          </button>
         </div>
-        <button type="button" class="menu__button">
-          <svg
-            width="40"
-            height="40"
-            aria-label="Переключатель мобильного меню"
-          >
-            <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
-          </svg>
-        </button> -->
       </div>
     </header>
 
@@ -258,7 +255,8 @@
           <ul class="work__list list">
             <li class="work__item">
               <img
-                src="./images/img1.jpg"
+                srcset="./images/img1-1x 1x, ./images/img1-2x.jpg 2x"
+                src="./images/img1-1x.jpg"
                 alt="человек набирает программный код"
                 width="370"
               />
@@ -268,7 +266,8 @@
             </li>
             <li class="work__item">
               <img
-                src="./images/img2.jpg"
+                srcset="./images/img2-1x 1x, ./images/img2-2x.jpg 2x"
+                src="./images/img2-1x.jpg"
                 alt="человек выбирает разметку для мобиньного приложения"
                 width="370"
               />
@@ -278,7 +277,8 @@
             </li>
             <li class="work__item">
               <img
-                src="./images/img3.jpg"
+                srcset="./images/img3-1x 1x, ./images/img3-2x.jpg 2x"
+                src="./images/img3-1x.jpg"
                 alt="человек смотрит на цветовую гамму"
                 width="370"
               />
@@ -297,7 +297,12 @@
             <h2 class="section__title">Наша команда</h2>
             <ul class="employee list">
               <li class="employee__item">
-                <img src="./images/photo1.jpg" alt="фото1" width="270" />
+                <img
+                  srcset="./images/photo1-1x.jpg 1x, ./images/photo1-2x.jpg 2x"
+                  src="./images/photo1-1x.jpg"
+                  alt="фото1"
+                  width="270"
+                />
                 <h3 class="employee__title">Игорь Демьяненко</h3>
                 <p class="employee__text">Product Designer</p>
 
@@ -334,7 +339,12 @@
               </li>
 
               <li class="employee__item">
-                <img src="./images/photo2.jpg" alt="фото2" width="270" />
+                <img
+                  srcset="./images/photo2-1x.jpg 1x, ./images/photo2-2x.jpg 2x"
+                  src="./images/photo2-1x.jpg"
+                  alt="фото2"
+                  width="270"
+                />
                 <h3 class="employee__title">Ольга Репина</h3>
                 <p class="employee__text">Frontend Developer</p>
 
@@ -371,7 +381,12 @@
               </li>
 
               <li class="employee__item">
-                <img src="./images/photo3.jpg" alt="фото3" width="270" />
+                <img
+                  srcset="./images/photo3-1x.jpg 1x, ./images/photo3-2x.jpg 2x"
+                  src="./images/photo3-1x.jpg"
+                  alt="фото3"
+                  width="270"
+                />
                 <h3 class="employee__title">Николай Тарасов</h3>
                 <p class="employee__text">Marketing</p>
 
@@ -408,7 +423,12 @@
               </li>
 
               <li class="employee__item">
-                <img src="./images/photo4.jpg" alt="фото4" width="270" />
+                <img
+                  srcset="./images/photo4-1x.jpg 1x, ./images/photo4-2x.jpg 2x"
+                  src="./images/photo4-1x.jpg"
+                  alt="фото4"
+                  width="270"
+                />
                 <h3 class="employee__title">Михаил Ермаков</h3>
                 <p class="employee__text">UI Designer</p>
 
@@ -575,5 +595,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

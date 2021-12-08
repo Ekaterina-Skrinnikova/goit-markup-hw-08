@@ -7,28 +7,26 @@
   flex-wrap: wrap;
 
   @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
     justify-content: center;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 94px;
   }
 
   &__item {
     margin-right: 8px;
     margin-bottom: 15px;
 
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
+    @media screen and (max-width: 767px) {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
 
-    &:nth-last-child(-n + 3) {
-      margin-bottom: 0;
+      &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+      }
     }
 
     @media screen and (min-width: 768px) {
-      margin-right: 8px;
-      // margin-bottom: 0;
+      margin-bottom: 0;
     }
 
     &:last-child {
